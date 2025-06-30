@@ -2,9 +2,9 @@ package cz.dan.notes.integration.helper.http;
 
 import cz.dan.notes.integration.config.rest.RestConfigProperties;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.test.context.TestComponent;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
@@ -12,7 +12,7 @@ import java.net.URI;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 
 @RequiredArgsConstructor
-@TestComponent
+@Component
 public class HttpHelper {
 
     private final RestConfigProperties restConfigProperties;
