@@ -25,4 +25,4 @@ jobs:
     with:
       REGISTRY: ghcr.io
       IMAGE_NAME: ${{ github.repository }}
-      SLEEP_SECONDS_FOR_SERVICES: 30
+      SLEEP_SECONDS_FOR_SERVICES: 20
