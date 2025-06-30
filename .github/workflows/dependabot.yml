@@ -1,0 +1,11 @@
+name: Dependabot
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 0"
+
+jobs:
+  call-dependabot:
+    permissions:
+      contents: write
+    uses: moravianblackcat/cicd/.github/workflows/dependabot.yml@main

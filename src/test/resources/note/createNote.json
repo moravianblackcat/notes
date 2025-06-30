@@ -1,0 +1,9 @@
+{
+  "text": "This is a sample note with multiple paragraphs.\n\nSecond paragraph.",
+  "source": "https://example.com/source",
+  "language": "en",
+  "author": "John Doe",
+  "personIds": [1, 2, 3],
+  "teamIds": [10, 20],
+  "gameIds": [100]
+}
