@@ -1,20 +1,17 @@
 package cz.dan.notes.integration.glue.note;
 
-import cz.dan.notes.integration.config.rest.RestConfigProperties;
+import cz.dan.integrationtests.http.HttpHelper;
 import cz.dan.notes.integration.helper.es.EsHelper;
-import cz.dan.notes.integration.helper.http.HttpHelper;
 import cz.dan.notes.integration.util.ClassPathResourceUtil;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 import java.util.Map;
 
 import static cz.dan.await.AwaitHelper.assertMapsAreLenientEqual;
 
 @RequiredArgsConstructor
-@EnableConfigurationProperties(RestConfigProperties.class)
 public class CreateNoteSteps {
 
     private final ClassPathResourceUtil classPathResourceUtil;
