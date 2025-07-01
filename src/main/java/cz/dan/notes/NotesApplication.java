@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"cz.dan"})
 @EnableElasticsearchRepositories
 @ConfigurationPropertiesScan
 public class NotesApplication {
