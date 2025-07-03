@@ -18,6 +18,7 @@ public class NoteController {
     @PostMapping
     public ResponseEntity<Void> createNote(@RequestBody CreateNoteRequestDto request) {
         noteService.createNote(request);
+
         return ResponseEntity.status(201).build();
     }
 

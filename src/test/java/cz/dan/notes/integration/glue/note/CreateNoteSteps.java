@@ -1,7 +1,7 @@
 package cz.dan.notes.integration.glue.note;
 
-import cz.dan.notes.integration.helper.es.EsHelper;
 import cz.dan.integrationtests.util.ClassPathResourceUtil;
+import cz.dan.notes.integration.helper.es.EsHelper;
 import io.cucumber.java.en.Then;
 import lombok.RequiredArgsConstructor;
 
@@ -16,9 +16,10 @@ public class CreateNoteSteps {
 
     private final EsHelper esHelper;
 
-    @Then("[{int}s] A note with some ID and fields from {} is created")
-    public void noteWithSomeIdAndFieldsFromIsCreated(int timeoutInSeconds, String fieldsJsonPath) {
-        assertMapsAreLenientEqual(timeoutInSeconds, this::getNote, classPathResourceUtil.getMapFromJsonPath(fieldsJsonPath));
+    @Then("[{int}s] A note with fields from {} is created")
+    public void noteWithFieldsFromIsCreated(int timeoutInSeconds, String fieldsJsonPath) {
+        assertMapsAreLenientEqual(timeoutInSeconds, this::getNote,
+                classPathResourceUtil.getMapFromJsonPath(fieldsJsonPath));
     }
 
     private Map<String, Object> getNote() {

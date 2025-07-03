@@ -9,6 +9,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 import org.springframework.data.elasticsearch.annotations.Setting;
 
+import java.time.Instant;
 import java.util.Set;
 import java.util.UUID;
 
@@ -45,5 +46,9 @@ public class Note {
 
     @Field(type = FieldType.Long)
     private final Set<Long> gameIds;
+
+    @Default
+    @Field(type = FieldType.Date)
+    private final Instant timestamp = Instant.now();
 
 }
