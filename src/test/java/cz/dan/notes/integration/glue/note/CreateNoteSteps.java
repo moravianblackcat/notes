@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.Map;
 
-import static cz.dan.await.AwaitHelper.assertMapsAreLenientEqual;
+import static cz.dan.integrationtests.util.AwaitHelper.assertMapsAreLenientEqual;
 
 @RequiredArgsConstructor
 public class CreateNoteSteps {
